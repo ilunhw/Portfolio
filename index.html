@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="no"> <!--- Angir at filen er på norsk -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefølje til Albina Cherviak</title> <!--- Tittel på nettsiden -->
+    <link rel="stylesheet" href="styles/main.css"> <!--- Lenken til CSS-fil -->
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Portefølje til Albina Cherviak</h1> <!--- Overskrift -->
+        <nav class="nav" aria-label="navigasjonsmeny">
+            <ul> <!--- Navigasjonslenker til forskjellige seksjoner på nettsiden -->
+                <li><a href="#bio" tabindex="1">Biografi</a></li> <!--- Tab 1 -->
+                <li><a href="#skills" tabindex="2">Mine ferdigheter</a></li> <!--- Tab 2 -->
+                <li><a href="#contact" tabindex="3">Kontakt</a></li> <!--- Tab 3 -->
+                <li><a href="#help" tabindex="4">Hjelp</a></li> <!--- Tab 4 -->
+            </ul>
+        </nav>
+        <div class="burger" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+         <ul>
+            <li><a href="#bio">Biografi</a></li>
+            <li><a href="#skills">Mine ferdigheter</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#help">Hjelp</a></li>
+         </ul>
+    </div>
+
+    <div class="grid-container"> <!--- Bruk av Grid for å organisere seksjoner -->
+
+        <section class="bio" id="bio"> <!--- Seksjon om biografi -->
+                <h2>Biografi</h2> <!--- Overskrift -->
+                <p>Hei! Jeg heter Albina Cherviak, og jeg er begynner i webutvikling.</p> <!--- Innhold med avsnitt -->
+                <p>Jeg er 17 år gammel og er en elev hos Hønefoss vgs.</p> 
+                <p>Jeg driver med både programmering og design og kan hjelpe deg med å utvikle dine ideer.</p>
+                <img src="images/bilde_av_meg.jpg" alt="Bilde av meg" loading="lazy"> <!--- Bilde -->
+        </section>
+
+        <section class="skills" id="skills"> <!--- Seksjon om ferdigheter -->
+                <h2>Mine ferdigheter</h2> <!--- Overskrift -->
+                <div class="table-container"> <!--- Container for tabellen -->
+                <table> <!--- Tabellen -->
+                    <tr> <!--- Tabellens overskrifter -->
+                        <th>Programmering</th>
+                        <th>Design</th>
+                    </tr>
+                    <tr> <!--- Tabellens data -->
+                        <td>Python</td>
+                        <td>Adobe Photoshop/Illustrator</td>
+                    </tr>
+                    <tr> 
+                        <td>Html/Css</td>
+                        <td>Adobe Premiere pro</td>
+                    </tr>
+                </table>
+                </div>
+                <details aria-expanded="false">
+                    <summary><h4>Hva jeg kan i programmering</h4></summary> <!--- Overskrift -->
+                    <p>Jeg gikk gjennom Python Essentials 1 Course i Cisco Networking Academy så jeg er kjent med hovedfunksjoner i Python og kan lage enkle koder. For eksempel, et av mine prosjekter er Python kalkulator. I tillegg er jeg kjent med Html/Css og kan lage enkel sktruktur og stil for nettsider.</p> <!--- Avsnitt -->
+                    <img src="images/kalkulator_python.png" alt="Kalkulator kode" loading="lazy"> <!--- Bilde 1 -->
+                </details>
+                
+                <details aria-expanded="false">
+                    <summary><h4>Hva jeg kan i design</h4></summary> <!--- Overskrift -->
+                    <p>Jeg kan redigere bilder/videoer ved hjelp av Adobe applikasjoner. For eksempel, jeg lagde en plakat til en skrekkfilm.</p> <!--- Avsnitt -->
+                    <img src="images/filmplakat.png" alt="Filmplakat i Adobe Photoshop" loading="lazy"> <!--- Bilde 2 -->
+                </details>
+        </section>
+        
+        <section class="contact" id="contact"> <!--- Seksjon om kontaktinformasjon -->
+            <h2>Kontakt</h2> <!--- Overskrift -->
+            <p>E-post: <a href="albinac@bfk.no">albinac@bfk.no</a></p> <!--- Lenken til e-postadressen min -->
+        </section>
+
+        <section class="help" id="help"> <!--- Seksjon for å kontakte meg for hjelp -->
+            <h2>Hva kan jeg hjelpe deg med?</h2> <!--- Overskrift -->
+            <form action="index.html"> <!--- Skjema for å sende inn forespørsel -->
+                <h3>Hva heter du?</h3> <br> <!--- Overskrift -->
+                <input type="text" placeholder="Navn" aria-label="navn" aria-required="true"> <!--- Felt for navn  -->
+                <input type="text" placeholder="Etternavn" aria-label="etternavn" aria-required="true"> <!--- Felt for etternavn -->
+                <p><input type="radio" name="state" id="kvinne" aria-labelledby="kvinne-label"> <!--- Knapper for å velge kjønn -->
+                <label id="kvinne-label" for="kvinne">Kvinne</label>
+                <input type="radio" name="state" id="mann" aria-labelledby="mann-label">
+                <label id="mann-label" for="mann">Mann</label></p>
+                <h3>Hva er e-postadressen din?</h3> <br> <!--- Overskrift -->
+                <input type="text" placeholder="mail@eksempel.com" aria-label="e-postadressen" aria-required="true"> <!--- Felt for e-post -->
+                <h3>Hva trenger du hjelp med?</h3> <!--- Overskrift -->
+                <select> <!--- Drop-meny med flere valg -->
+                    <option>----</option>
+                    <option>Programmering</option>
+                    <option>Design</option>
+                    <option>Noe annet - skriv i detaljer</option>
+                </select>
+                <h3>Detaljer</h3> <!--- Overskrift -->
+                <p><textarea placeholder="Skriv mer detaljert om hva du trenger" aria-label="Detaljer om hva du trenger" aria-required="true"></textarea></p> <!--- Felt for detaljer -->
+                <button aria-label="Sende-knappen">Sende</button> <!--- "Sende"-knappen -->
+                <button type="reset" aria-label="Slette-knappen">Slette</button> <!--- "Slette"-knappen -->
+            </form>
+        </section>
+    </div>
+
+    <footer> <!--- Footer med opphavsrett -->
+        <p>&copy; 2025 Portefølje til Albina Cherviak.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
+    

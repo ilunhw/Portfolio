@@ -1,0 +1,316 @@
+html, body {
+    width: 100%; /* Tilpasser bredde */
+    margin: 0; /* Fjerner standard ytre mellomrom */
+    padding: 0; /* Fjerner standard innvendig mellomrom */
+}
+
+/* Styling for body */
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Skrifttype */
+    background-color: rgba(157, 10, 10, 0.83); /* Bakgrunnsfarge*/
+}
+
+/* Styling for header */
+
+header {
+    background-color: #550707; /* Bakgrunnsfarge */
+    color: rgb(234, 182, 182); /* Tekstfarge */
+    text-align: center; /* Sentrerer tekst */
+    padding: 10px; /* Innvendig mellomrom */
+}
+
+.burger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger span{
+    width: 100%;
+    height: 4px;
+    background-color: rgb(234, 182, 182);
+}
+
+/* Styling for navigasjonsmeny */
+
+nav ul {
+    list-style: none; /* Fjerner punktmerking */
+    padding: 0; /* Fjerner standard innvendig mellomrom */
+    margin: 0; /* Fjerner standard ytre mellomrom */
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* Tillater flere linjer */
+    justify-content: center; /* Sentrerer menyen */
+}
+
+/* Styling for hvert element i navigasjonsmeny */
+
+nav ul li {
+    margin: 0 10px; /* Mellomrom mellom elementer */
+}
+
+/* Styling for lenkene i navigasjonsmeny */
+
+nav ul li a {
+    color: rgb(234, 182, 182); /* Tekstfarge */
+    text-decoration: none; /* Fjerner understrekning */
+    padding: 10px; /* Innvendig mellomrom */
+    display: block; /* Gjør lenken klikkbar i hele området */
+    border: 1px solid rgb(234, 182, 182); /* Border rundt lenkene */
+    border-radius: 10px; /* Runde kanter */
+}
+
+nav ul li :hover { /* Endrer farge når brukeren holder musepekeren over knappen */
+    color: #550707;
+    background-color: rgb(234, 182, 182);
+    
+}
+
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px solid rgb(227, 79, 79); /* Farge på fokus-rammen */
+    box-shadow: 0 0 5px rgb(151, 45, 45); /* Farge på skyggen */
+  }
+
+/* Styling for detaljer-seksjonene */
+
+details {
+    margin-bottom: 20px; /* Avstand mellom seksjoner */
+    padding: 10px; /* Innvendig mellomrom */
+    background-color: #550707; /* Bakgrunnsfarge */
+    color: rgb(251, 216, 216); /* Tekstfarge */
+    border-radius: 10px; /* Runde kanter */
+}
+
+/* Styling for tekst i detaljer-seksjoner */
+
+details p {
+    margin-top: 10px; /* Avstand fra toppen */
+    margin-bottom: 10px; /* Avstand fra bunnen */
+    line-height: 1.5; /* Linjeavstand for bedre lesbarhet */
+}
+
+details:hover {
+    cursor: pointer;
+    background-color: rgba(157, 10, 10, 0.83);
+}
+
+/* Styling for bilder i detaljer-seksjoner */
+
+details img {
+    max-width: 25%; /* Full bredde */
+    height: auto; /* Tilpasser høyden */
+    margin-top: 10px; /* Avstand fra toppen */
+}
+
+/* Styling for Grid-container */
+
+.grid-container {
+    display: grid; /* Bruker CSS Grid */
+    padding: 20px; /* Innvendig mellomrom */
+    background-color: rgb(233, 189, 189); /* Bakgrunnsfarge */
+    margin: 20px; /* Ytre mellomrom */
+    gap: 20px; /* Avstand mellom elementer */
+}
+
+/* Styling for alle hovedseksjonene */
+
+.bio, 
+.skills, 
+.contact, 
+.help {
+    background: rgb(251, 216, 216); /* Bakgrunnsfarge */
+    padding: 20px; /* Innvendig mellomrom */
+    border-radius: 10px; /* Runde kanter */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skygge */
+}
+
+/* Styling for overskriftene */
+
+h2 {
+    color: #333; /* Tekstfarge */
+}
+
+/* Styling for tabellen */
+
+table {
+    width: 100%; /* Full bredde */
+    border-collapse: collapse; /* Fjerner mellomrom mellom celler */
+    margin: 20px 0; /* Avstand fra andre elementer */
+    font-size: 16px; /* Tekststørrelse */
+    text-align: center; /* Sentrerer tekst */
+    background-color: rgb(251, 216, 216); /* Bakgrunnsfarge */
+}
+
+/* Container for tabellen */
+
+.table-container {
+    overflow: auto; /* Gjør tabellen rullbar */
+    max-width: 100%; /* Begrenser bredde */
+}
+
+/* Styling for tabellens celler */
+
+th, td {
+    border: 1px solid #550707; /*Farge til linjer */
+    padding: 10px; /* Innvendig mellomrom */
+}
+     
+/* Styling for tabellens overskrifter */
+
+th {
+    background-color: #550707; /* Bakgrunnsfarge */
+    color: rgb(251, 216, 216); /* Tekstfarge */
+}
+
+/* Styling for generelle bilder */
+
+img {
+    height: auto; /* Tilpasser høyden */
+    display: block; /* Fjerner ekstra mellomrom under bilder */
+    object-fit: cover; /* Fyller området uten forvrengning */
+    width: 25%; /* Bredde */
+    margin: 0%; /* Fjerner ekstra mellomrom */
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #550707;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+}
+
+.mobile-nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-nav li {
+    text-align: center;
+    padding: 10px;
+}
+
+.mobile-nav li a {
+    color: rgb(234, 182, 182);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.mobile-nav li a:hover {
+    background-color: rgb(234, 182, 182);
+    color: #550707;
+}
+
+/* Styling for skjermstørrelser mindre enn 1024px (bruk av media queries for tablett) */
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 25px; /* Endrer tekststørrelse */
+    }
+    table {
+        font-size: 30px; /* Endrer tekststørrelse */
+    }
+}
+
+/* Styling for skjermstørrelser mindre enn 768px (bruk av media queries for mobil) */
+
+@media (max-width: 768px) {
+    .burger { 
+        display: flex 
+    }
+    body {
+        font-size: 14px; /* Endrer tekststørrelse */
+    }
+    img {
+        width: 90%; /* Øker bildestørrelsen for mobil */
+        max-width: none; /* Fjerner full bredde */
+    }
+    details img {
+        max-width: 90%; /* Øker bildestørrelsen i detaljer */
+    }
+    header {
+        padding: 30px; /* Topp-padding */
+    }
+
+    nav ul {
+        display: none; /* Setter elementer etter hverandre */
+        flex-wrap: nowrap; /* Fjerner overføring av elementer til andre linje */
+    }
+    nav ul li a {
+        padding: 10px 10px; /* Innvendig mellomrom */
+        font-size: 20px; /* Endrer tekststørrelse */
+        border: none;
+    
+    }
+    .grid-container {
+        max-width: 100%; /* Full bredde */
+    }
+    .bio, 
+    .skills, 
+    .contact, 
+    .help {
+        width: 87%; /* Tilpasser bredden */
+        overflow: hidden; /* Skjuler eventuelt innhold som går over */
+    }
+    table {
+        font-size: 13px; /* Endrer tekststørrelse */
+    }
+    .mobile-nav.active {
+        display: block;
+    }
+    
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/* Styling for skjema */
+
+form {
+    gap: 20px; /* Avstand mellom elementer */
+    max-width: 500px; /* Begrenset bredde */
+    padding: 30px; /* Innvendig mellomrom */
+    background-color: white; /* Bakgrunnsfarge */
+    border-radius: 25px; /* Runde kanter */
+}
+
+/* Styling for "Sende"-knappen */
+
+button {
+    padding: 10px 20px; /* Innvendig mellomrom */
+    background-color: #550707; /* Bakgrunnsfarge */
+    color: white; /* Tekstfarge */
+    border-radius: 10px; /* Runde kanter */
+    border: none; /* Fjerner standard kant */
+    cursor: pointer; /* Endrer musepekeren til hånd */
+}
+
+/* Styling for "Slette"-knappen */
+
+button[type="reset"] {
+    background-color: #aaa; /* Bakgrunnsfarge */
+}
+
+button:hover {
+    background-color: rgba(157, 10, 10, 0.83); /* Endrer farge når brukeren holder musepekeren over knappen */
+}
+
+/* Styling for footer */
+
+footer {
+    text-align: center; /* Sentrerer innholdet */
+    padding: 10px; /* Innvendig mellomrom */
+    background-color: #550707; /* Bakgrunnsfarge */
+    color: rgb(234, 182, 182); /* Tekstfarge */
+}
